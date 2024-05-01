@@ -1,0 +1,188 @@
+Sentence,CTIKG with CTIQwen,CTIKG with GPT4
+"Began attack with THEIA Ubuntu 12.04 x64 by exploiting Firefox 54.0.1 using a malicious ad server via
+the www.gatech.edu website. The exploit resulted in the drakon implant running in memory in the
+Firefox process with a connection out to the attacker operator console. The attacker used putfile to
+write a drakon implant executable binary to the target host's disk. The attacker then executed the drakon implant from the target disk using a privilege escalated execution capability to run the new
+process as root. The new root drakon implant process connected out to the operator console to give
+the attacker a 2nd shell to the target host, this time with root access. The attacker closed the non-root
+shell and switched over to the root shell. At this point the drakon implant stopped responding, and we
+lost connection to the THEIA host (as well as the open connection to the TRACE host from earlier today).
+The attacker gained access once again when Firefox browsed to www.gatech.edu. The attacker then
+wrote another file to disk to be used later and left the connection to the operator console open.","[THEIA Ubuntu 12.04 x64, exploited, Firefox 54.0.1]
+[Exploit, used, malicious ad server]
+[malicious ad server, hosted on, www.gatech.edu]
+[Exploit, resulted in, drakon implant running in memory]
+[Attacker, used putfile, write drakon implant executable binary]
+[Attacker, executed, drakon implant from the target disk]
+[attacker,run new process, as root]
+[Drakon implant process, connected out to, operator console]
+[Attacker, gained access, through Firefox]
+[attacker,switched over to, root shell]
+[Attacker, wrote, another file to disk]","[SUBJECT:Firefox 54.0.1, RELATION:was exploited by, OBJECT:THEIA Ubuntu 12.04 x64]
+    [SUBJECT:attacker, RELATION:used, OBJECT:malicious ad server]
+    [SUBJECT:attacker, RELATION:used, OBJECT:www.gatech.edu website]
+    [SUBJECT:exploit, RELATION:resulted in, OBJECT:drakon implant running in memory]
+    [SUBJECT:drakon implant, RELATION:running in, OBJECT:Firefox process]
+    [SUBJECT:drakon implant, RELATION:has connection to, OBJECT:attacker operator console]
+    [SUBJECT:attacker, RELATION:used, OBJECT:putfile]
+    [SUBJECT:attacker, RELATION:wrote, OBJECT:drakon implant executable binary]
+    [SUBJECT:binary, RELATION:wrote to, OBJECT:target hosts disk]
+    [SUBJECT:attacker, RELATION:executed, OBJECT:drakon implant]
+    [SUBJECT:Firefox, RELATION:browsed to, OBJECT:www.gatech.edu website]
+    [SUBJECT:attacker, RELATION:gained access, OBJECT:to the target host]
+    [SUBJECT:attacker, RELATION:wrote, OBJECT:another file to disk]
+    [SUBJECT:attacker, RELATION:left, OBJECT:connection to the attacker operator console open]
+    [SUBJECT:attacker, RELATION:closed, OBJECT:non-root shell]
+    [SUBJECT:attacker, RELATION:switched over to, OBJECT:root shell]
+    [SUBJECT:drakon implant, RELATION:stopped responding]"
+"Began attack with FiveDirections Windows 10 by exploiting Firefox 54.0.1 by browsing to
+www.cnpc.com.cn. Via the exploit, drakon was loaded into memory in the Firefox process, which
+connected out to the operator console for C2. The attacker loaded the netrecon module to recon the
+network interfaces of the target host. The attacker exfil'ed multiple files from the target host's
+documents directory. The attacker intended to leave the connection open for later but lost access when
+the netrecon UDP exfil failed.","[FiveDirections Windows 10, exploited, Firefox 54.0.1]
+[Firefox 54.0.1, browsed to, www.cnpc.com.cn]
+[Drakon, loaded into, memory in the Firefox process]
+[Firefox process, connected out to, operator console]
+[Attacker, loaded, netrecon module]
+[Netrecon module, recon, network interfaces of the target host]
+[Attacker, exfil'ed, multiple files from the target host's documents directory]
+[Attacker, intended to leave, connection]
+[Attack, lost,access]","[SUBJECT:Firefox,RELATION:was exploited by,OBJECT:FiveDirections Windows 10],[SUBJECT:Firefox,RELATION:loaded,OBJECT:drakon],[SUBJECT:Firefox,RELATION:loaded into memory,OBJECT:drakon],[SUBJECT:Firefox,RELATION:connected out to,OBJECT:operator console for C2],[SUBJECT:attacker,RELATION:loaded,OBJECT:netrecon module],[SUBJECT:attacker,RELATION:recon,OBJECT:network interfaces of the target host],[SUBJECT:attacker,RELATION:exfil,OBJECT:multiple files from the target hosts documents],[SUBJECT:attacker,RELATION:intended to leave,OBJECT:connection open],[SUBJECT:attacker,RELATION:lost access,OBJECT:netrecon UDP exfil failed]"
+"Continued the attack against ClearScope by using connection A4 left open in the operator console from
+the previous attack. The connection was to a new drakon process with root privileges which was
+created by the attacker. The attacker downloaded the libdrakon.so implant module to the target disk
+and tried to inject it into the sshd process. Since the process injection failed, the attacker downloaded
+and elevated new drakon implant process with a new connection (A5) to the operator console. The
+attacker tried to repeat the process injection but this time as root. The attacker downloaded the
+libdrakon.so module and tried to inject it into sshd once again. The process injection failed again. The
+attacker left the connections to the operator console open.","[Attacker, created, new drakon process]
+[New drakon process, had, root privileges]
+[Attacker, downloaded, libdrakon.so implant module]
+[Attacker, tried to inject, libdrakon.so into sshd process]
+[Attacker, downloaded and elevated, new drakon implant process]
+[New drakon implant process, established, connection A5 to operator console]
+[Attacker, downloaded, libdrakon.so module]
+[Attacker, tried to inject, libdrakon.so into sshd process]
+[Attacker, left, connections to operator console open]","[SUBJECT:attacker,RELATION:created,OBJECT:drakon process],[SUBJECT:attacker,RELATION:downloaded,OBJECT:libdrakon.so implant module],[SUBJECT:attacker,RELATION:tried_to_inject,OBJECT:libdrakon.so implant module],[SUBJECT:attacker,RELATION:downloaded_and_elevated,OBJECT:drakon implant process],[SUBJECT:attacker,RELATION:tried_to_repeat_process_injection,OBJECT:as root],[SUBJECT:connection,RELATION:was_to,OBJECT:drakon process],[SUBJECT:libdrakon.so implant module,RELATION:tried_to_inject_into,OBJECT:sshd process],[SUBJECT:drakon implant process,RELATION:with_new_connection,OBJECT:A5],[SUBJECT:attacker,RELATION:used,OBJECT:connection A4],[SUBJECT:attacker,RELATION:used,OBJECT:connection A5],[SUBJECT:process_injection,RELATION:failed,OBJECT:None], [SUBJECT:attacker,RELATION:downloaded,OBJECT:libdrakon.so implant module],
+        [SUBJECT:attacker,RELATION:tried_to_inject,OBJECT:sshd process],
+        [SUBJECT:attacker,RELATION:left,OBJECT:connection to the operator console open]"
+"Began the attack with ClearScope Android 6.0.1 exploit of Firefox 54.0.1 by browsing to www.mit.gov.jo.
+The first attempt worked; however, the browser was closed by benign activity before the attacker had a
+chance to pivot from the Firefox process to a new process. The exploit was repeated by once again
+browsing to www.mit.gov.jo, and this time the attacker was able to remain on the system when Firefox
+was closed. The attacker downloaded a libdrakon implant .so to the target file system and then
+elevated it to run a new instance of the drakon implant as a root process. Unfortunately, module
+loading in general failed on ClearScope, including the ability to inject drakon into a process. The
+connection to the operator console was left open.","[ClearScope Android 6.0.1, exploited, Firefox 54.0.1]
+[Firefox 54.0.1,browsing to, www.mit.gov.jo]
+[Browser, was, closed]
+[Attacker, downloaded, libdrakon implant .so]
+[Attacker, elevated, libdrakon implant]
+[Attacker, run a new instance of, the drakon implant]
+[drakon,as, root process]
+[Module loading, failed on, ClearScope]
+[Connection to operator console, was left, open]","[SUBJECT:attacker,RELATION:used,OBJECT:ClearScope Android 6.0.1 exploit of Firefox 54.0.1],[SUBJECT:attacker,RELATION:browsed,OBJECT:www.mit.gov.jo],[SUBJECT:Firefox 54.0.1,RELATION:closed by,OBJECT:benign activity],[SUBJECT:attacker,RELATION:downloaded,OBJECT:libdrakon implant .so],[SUBJECT:attacker,RELATION:remained on the system,OBJECT:Firefox closed],[SUBJECT:attacker,RELATION:downloaded,OBJECT:.so,OBJECT:target file system], 
+        
+        [SUBJECT:target file system,RELATION:elevated,OBJECT:run drakon implant as root process],
+        [SUBJECT:module loading,RELATION:failed on,OBJECT:ClearScope],
+        [SUBJECT:module loading,RELATION:include,OBJECT:inject drakon into process],
+        [SUBJECT:connection,RELATION:left open,OBJECT:operator console]
+        
+        I reviewed the long-term and short-term memories, and no modifications are needed based on the rules provided. The triples in the short-term memory are consistent with the long-term memory, and no new triples are added that don't exist in either memory. Therefore, the short-term memory remains unchanged.
+
+        "
+"Continued attack against THEIA by exploiting the target via the malicious pass manager browser
+extension in Firefox 54.0.1. The attacker had previously tried to load drakon into the memory of the
+browser extension on Windows, but this was unsuccessful. So, the attacker resorted to writing the
+drakon implant executable to disk on the target upon exploiting the browser extension. While noisier
+than the originally planned attack, this achieved the same purpose. The attacker was able to run micro
+apt from the target disk. Micro apt connected out to the micro C2 listener. The attacker then used
+micro apt to perform a portscan of the known hosts on the target network.","[Attacker, exploited, target via malicious pass manager browser extension in Firefox 54.0.1]
+[Attacker, tried to load, drakon]
+[Attacker, wrote, drakon implant executable to disk]
+[Attacker, ran, micro apt]
+[Micro apt, connected out to, micro C2 listener]
+[Attacker, used micro apt, perform a portscan of known hosts on the target network]","[SUBJECT:hacker,RELATION:attack\_against,OBJECT:THEIA],[SUBJECT:hacker,RELATION:exploit,OBJECT:malicious\_pass\_manager\_browser\_extension],[SUBJECT:hacker,RELATION:resort\_to\_writing,OBJECT:drakon\_implant],[SUBJECT:drakon\_implant,RELATION:try\_to\_load,OBJECT:memory\_of\_browser\_extension],[SUBJECT:drakon\_implant,RELATION:wrote\_to,OBJECT:disk\_on\_target],[SUBJECT:drakon\_implant,RELATION:be\_an\_executable,OBJECT:implant\_executable],[SUBJECT:drakon\_implant,RELATION:unsuccessful\_to\_load\_into,OBJECT:memory\_of\_browser\_extension], 
+Since the short-term memory already has well-formed triples consistent with the long-term memory, no modifications are needed. Therefore, the new short-term memory area remains the same.
+
+[SUBJECT:attacker,RELATION:able to run,OBJECT:APT],
+[SUBJECT:APT,RELATION:run from,OBJECT:disk on the target],
+[SUBJECT:APT,RELATION:connected out to,OBJECT:C2 listener],
+[SUBJECT:attacker,RELATION:used,OBJECT:APT],
+[SUBJECT:APT,RELATION:perform,OBJECT:portscan],
+[SUBJECT:portscan,RELATION:performed on,OBJECT:target network]
+
+"
+"Began attack with TRACE Ubuntu 14.04 x64 by exploiting Firefox 54.0.1 using a malicious ad server via
+the www.allstate.com website. The exploit resulted in the drakon implant running in memory in the
+Firefox process with a connection out to the attacker operator console. The attacker used putfile to
+write a drakon implant executable binary to the target host's disk. The attacker then executed the
+drakon implant from the target disk using a privilege escalated execution capability to run the new
+process as root. The new root drakon implant process connected out to the operator console to give
+the attacker a 2nd shell to the target host, this time with root access. The attacker closed the non-root
+shells and switched over to the root shell. The attacker then wrote another file to disk to be used later
+and left the connection to the operator console open. Unfortunately, the operator console crashed not","[TRACE Ubuntu 14.04 x64, exploited, Firefox 54.0.1]
+[server, via, www.allstate.com]
+[Exploit, resulted in, drakon implant running in memory]
+[Attacker, used putfile, write drakon implant executable binary]
+[Attacker, executed, drakon implant from the target disk]
+[Drakon implant process, connected out to, operator console]
+[Attacker, gave, 2nd shell to the target host with root access]
+[Attacker, switched over to, root shell]
+[Attacker, wrote, another file to disk]","[SUBJECT:attacker,RELATION:used,OBJECT:putfile],[SUBJECT:attacker,RELATION:wrote,OBJECT:drakon implant],[SUBJECT:binary,RELATION:wrote to,OBJECT:target host disk],[SUBJECT:attacker,RELATION:executed,OBJECT:drakon implant],[SUBJECT:drakon implant,RELATION:ran in,OBJECT:Firefox process],[SUBJECT:Firefox process,RELATION:had connection to,OBJECT:operator console],[SUBJECT:exploit,RELATION:resulted in,OBJECT:drakon implant running in memory],[SUBJECT:exploit,RELATION:used by,OBJECT:attacker],[SUBJECT:exploit,RELATION:used on,OBJECT:Ubuntu 14.04],[SUBJECT:exploit,RELATION:used via,OBJECT:malicious ad server],[SUBJECT:exploit,RELATION:used via,OBJECT:www.allstate.com],[SUBJECT:new process,RELATION:connected to,OBJECT:operator console],[SUBJECT:new process,RELATION:ran as,OBJECT:root],[SUBJECT:attacker,RELATION:used,OBJECT:privilege escalation capability], 
+[SUBJECT:attacker, RELATION:wrote, OBJECT:another file]
+[SUBJECT:attacker, RELATION:left the connection to, OBJECT:attacker operator console open]
+"
+"Began attack with CADETS FreeBSD by exploiting Nginx. The first attempt to exploit Nginx failed. The
+second attempt succeeded and resulted in loaderDrakon connected to an operator console shell. The
+attacker downloaded a file to be elevated as a new process running as root. The elevated process
+downloaded and ran the netrecon module. The netrecon module failed to connect out to the first
+netcat address, 154.145.113.18:80. The second attempt worked with netcat address 61.167.39.128:80.
+The attacker downloaded the libdrakon module to be injected to location /var/log/devc. The attacker
+tried to inject into sshd PID 809 but the injection failed. The CADETS host locked up around this time
+and resulted in a kernel panic. This resulted in lost connection to loaderDrakon on the target. Do not
+know what caused the kernel panic but CADETS was going to investigate.","[CADETS FreeBSD, exploited, Nginx]
+[loaderDrakon, connected, to operator console]
+[Attacker, downloaded, file to be elevated as new process]
+[Elevated process, downloaded and ran, netrecon module]
+[Netrecon module, failed to connect, to netcat address 154.145.113.18:80]
+[Netrecon module, succeeded to connect, to netcat address 61.167.39.128:80]
+[Attacker, downloaded, libdrakon module]
+[Libdrakon module, to be injected, to location /var/log/devc
+[Attacker, tried to inject, into sshd PID 809]","[SUBJECT:attacker,RELATION:exploited,OBJECT:CADETS FreeBSD],[SUBJECT:attacker,RELATION:exploited,OBJECT:Nginx],[SUBJECT:first attempt,RELATION:failed to exploit,OBJECT:Nginx],[SUBJECT:second attempt,RELATION:succeeded,OBJECT:loaderDrakon connected to operator console shell],[SUBJECT:attacker,RELATION:downloaded a file,OBJECT:elevated as new process running as root],[SUBJECT:new process,RELATION:downloaded and ran,OBJECT:netrecon module],[SUBJECT:netrecon module,RELATION:failed to connect out to,OBJECT:154.145.113.18:80],[SUBJECT:second attempt,RELATION:worked with,OBJECT:154.145.113.18:80],[SUBJECT:attacker,RELATION:downloaded,OBJECT:loaderDrakon],[SUBJECT:loaderDrakon,RELATION:injected to,OBJECT:devc], 
+
+[SUBJECT:kernel panic,RELATION:causes,OBJECT:lost connection to loaderDrakon], [SUBJECT:CADETS FreeBSD host,RELATION:locked,OBJECT:around this time], [SUBJECT:CADETS FreeBSD,RELATION:investigating,OBJECT:kernel panic], [SUBJECT:loaderDrakon,RELATION:injected to,OBJECT:devc]
+
+"
+"Began attack with FiveDirections Windows 10 by exploiting Firefox 54.0.1 by browsing to
+www.cnpc.com.cn. Via the exploit, drakon was loaded into memory in the Firefox process, which
+connected out to the operator console for C2. The attacker loaded the netrecon module to recon the
+network interfaces of the target host. The attacker exfil'ed multiple files from the target host's
+documents directory. The attacker intended to leave the connection open for later but lost access when
+the OC2 crashed.","[FiveDirections Windows 10, exploited, Firefox 54.0.1]
+[Firefox 54.0.1, browsed to, www.cnpc.com.cn]
+[Drakon, loaded into memory, in Firefox process]
+[Firefox process, connected out to, operator console for C2]
+[Attacker, loaded, netrecon module]
+[Netrecon module, recon, network interfaces of target host]
+[Attacker, exfil'ed, multiple files from target host's documents directory]
+[Attacker, intended to leave, connection open]","[SUBJECT:Firefox,RELATION:is a version of,OBJECT:version],[SUBJECT:Firefox,RELATION:is used in,OBJECT:Windows 10],[SUBJECT:Firefox,RELATION:was exploited by,OBJECT:FiveDirections],[SUBJECT:Firefox,RELATION:was used to,OBJECT:connect to C2],[SUBJECT:C2,RELATION:is an operator console],[SUBJECT:Firefox 54.0.1,RELATION:loaded,OBJECT:drakon],[SUBJECT:drakon,RELATION:loaded into,OBJECT:memory in Firefox process],[SUBJECT:drakon,RELATION:connected to,OBJECT:C2],[SUBJECT:module,RELATION:loaded by,OBJECT:attacker],[SUBJECT:module,RELATION:used to,OBJECT:recon network interfaces],[SUBJECT:attacker,RELATION:exfiltrated,OBJECT:files documents directory],[SUBJECT:attacker,RELATION:intended to,OBJECT:leave connection open],[SUBJECT:system,RELATION:lost access to,OBJECT:attacker],[SUBJECT:system,RELATION:crashed,OBJECT:lost access]"
+"The attacker continued the attack against CADETS by once again exploiting Nginx with a malformed
+HTTP request. This time, the exploit worked on the first attempt, resulting in a drakon implant running
+in memory of Nginx with a shell connected via HTTP to the operator console. The attacker downloaded
+the libdrakon implant .so to be injected into the sshd process. The attacker tried process injection but
+once again failed, resulting in a CADETS crash.","[Attacker, exploited, Nginx with a malformed HTTP request]
+[Exploit, resulted in, drakon implant running in memory of Nginx]
+[Drakon implant, connected via HTTP, to the operator console]
+[Attacker, downloaded, libdrakon implant .so]
+[Attacker, tried process injection into, sshd process]
+[Process injection, resulted in, CADETS crash]","[SUBJECT:attacker,RELATION:exploited,OBJECT:Nginx],[SUBJECT:exploit,RELATION:worked on,OBJECT:first attempt],[SUBJECT:exploit,RESULTED in,OBJECT:drakon implant running in memory of Nginx],[SUBJECT:shell,RELATED to,OBJECT:operator console],[SUBJECT:attacker,DOWNLOAD,OBJECT:libdrakon implant .so],[SUBJECT:attacker,INTENDED to inject,OBJECT:libdrakon implant .so,INTO:sshd process],[SUBJECT:attacker,TRIED,OBJECT:process injection],[SUBJECT:process injection,RESULTED in,OBJECT:CADETS crash]"
+"Continued attack against TA5.2-windows by trying to exploit the target via the malicious pass manager
+browser extension in Firefox 54.0.1. The attacker tried to load drakon into the memory of the browser
+extension, but this was unsuccessful. So, the attacker resorted to writing the drakon implant executable
+to disk on the target upon exploiting the browser extension. Drakon failed to run from disk, and the file
+was left on disk after the failed attack.","[Attacker, tried to exploit, TA5.2-windows via malicious pass manager browser extension in Firefox 54.0.1]
+[Attacker, tried to load, drakon into the memory of the browser extension]
+[Drakon implant executable, written to, disk on the target]
+[File, was left, on disk after the failed attack]","[SUBJECT:attacker,RELATION:exploits,OBJECT:pass manager extension in Firefox 54.0.1],[SUBJECT:attacker,RELATION:loads,OBJECT:drakon],[SUBJECT:attacker,RELATION:writes,OBJECT:drakon implant executable],[SUBJECT:drakon,RELATION:is,OBJECT:unsuccessful],[SUBJECT:file,RELATION:left on,OBJECT:disk after the failed attack],[SUBJECT:attacker,RELATION:writes,OBJECT:disk on the target],[SUBJECT:attack,RELATION:against,OBJECT:TA5.2-windows]"
